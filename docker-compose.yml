@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:10.5
+    container_name: FFB_server
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=fakeFb
+    expose:
+      - 5433
+    ports:
+      - "5433:5432"
